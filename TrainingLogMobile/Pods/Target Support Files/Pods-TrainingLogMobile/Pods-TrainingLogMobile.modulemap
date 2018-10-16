@@ -1,0 +1,6 @@
+framework module Pods_TrainingLogMobile {
+  umbrella header "Pods-TrainingLogMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}

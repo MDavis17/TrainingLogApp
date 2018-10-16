@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D1856E924C9D5B36D19E3EA /* Pods_TrainingLogMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1964E593D042E20DE16D8EC /* Pods_TrainingLogMobile.framework */; };
+		64901F73217498C3007BF638 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64901F72217498C3007BF638 /* SignInViewController.swift */; };
+		64901F752174B60F007BF638 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64901F742174B60F007BF638 /* RegistrationViewController.swift */; };
+		64901F772174B837007BF638 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64901F762174B837007BF638 /* DashboardViewController.swift */; };
+		64AEAD84216D93D300630DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AEAD83216D93D300630DEF /* AppDelegate.swift */; };
+		64AEAD86216D93D300630DEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AEAD85216D93D300630DEF /* ViewController.swift */; };
+		64AEAD89216D93D300630DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64AEAD87216D93D300630DEF /* Main.storyboard */; };
+		64AEAD8C216D93D300630DEF /* TrainingLogMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64AEAD8A216D93D300630DEF /* TrainingLogMobile.xcdatamodeld */; };
+		64AEAD8E216D93D400630DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64AEAD8D216D93D400630DEF /* Assets.xcassets */; };
+		64AEAD91216D93D400630DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64AEAD8F216D93D400630DEF /* LaunchScreen.storyboard */; };
+		64AEAD9C216D93D400630DEF /* TrainingLogMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AEAD9B216D93D400630DEF /* TrainingLogMobileTests.swift */; };
+		96D6C3889F04E5A2341AD82B /* Pods_TrainingLogMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72F8188D11EB71543B6A507 /* Pods_TrainingLogMobileTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64AEAD98216D93D400630DEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64AEAD78216D93D300630DEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64AEAD7F216D93D300630DEF;
+			remoteInfo = TrainingLogMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1344FBDE38176B5FE2C3D40F /* Pods-TrainingLogMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingLogMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingLogMobileTests/Pods-TrainingLogMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		20DC2FCA5A32BD9125FA9577 /* Pods-TrainingLogMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingLogMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingLogMobile/Pods-TrainingLogMobile.release.xcconfig"; sourceTree = "<group>"; };
+		5DF54A5A8A0F00D886882B05 /* Pods-TrainingLogMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingLogMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingLogMobile/Pods-TrainingLogMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		64901F72217498C3007BF638 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		64901F742174B60F007BF638 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		64901F762174B837007BF638 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		64930C8AE1AEA046E9CE9E7D /* Pods-TrainingLogMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingLogMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingLogMobileTests/Pods-TrainingLogMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		64AEAD80216D93D300630DEF /* TrainingLogMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingLogMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64AEAD83216D93D300630DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		64AEAD85216D93D300630DEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		64AEAD88216D93D300630DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		64AEAD8B216D93D300630DEF /* TrainingLogMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrainingLogMobile.xcdatamodel; sourceTree = "<group>"; };
+		64AEAD8D216D93D400630DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64AEAD90216D93D400630DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		64AEAD92216D93D400630DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64AEAD97216D93D400630DEF /* TrainingLogMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingLogMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64AEAD9B216D93D400630DEF /* TrainingLogMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingLogMobileTests.swift; sourceTree = "<group>"; };
+		64AEAD9D216D93D400630DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B72F8188D11EB71543B6A507 /* Pods_TrainingLogMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingLogMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1964E593D042E20DE16D8EC /* Pods_TrainingLogMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingLogMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64AEAD7D216D93D300630DEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1856E924C9D5B36D19E3EA /* Pods_TrainingLogMobile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64AEAD94216D93D400630DEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96D6C3889F04E5A2341AD82B /* Pods_TrainingLogMobileTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E61903BF55DB5492D1296BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DF54A5A8A0F00D886882B05 /* Pods-TrainingLogMobile.debug.xcconfig */,
+				20DC2FCA5A32BD9125FA9577 /* Pods-TrainingLogMobile.release.xcconfig */,
+				1344FBDE38176B5FE2C3D40F /* Pods-TrainingLogMobileTests.debug.xcconfig */,
+				64930C8AE1AEA046E9CE9E7D /* Pods-TrainingLogMobileTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		64AEAD77216D93D300630DEF = {
+			isa = PBXGroup;
+			children = (
+				64AEAD82216D93D300630DEF /* TrainingLogMobile */,
+				64AEAD9A216D93D400630DEF /* TrainingLogMobileTests */,
+				64AEAD81216D93D300630DEF /* Products */,
+				3E61903BF55DB5492D1296BE /* Pods */,
+				C6F98D99323FF5DA5C29EF3A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		64AEAD81216D93D300630DEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64AEAD80216D93D300630DEF /* TrainingLogMobile.app */,
+				64AEAD97216D93D400630DEF /* TrainingLogMobileTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64AEAD82216D93D300630DEF /* TrainingLogMobile */ = {
+			isa = PBXGroup;
+			children = (
+				64AEAD83216D93D300630DEF /* AppDelegate.swift */,
+				64AEAD85216D93D300630DEF /* ViewController.swift */,
+				64AEAD87216D93D300630DEF /* Main.storyboard */,
+				64AEAD8D216D93D400630DEF /* Assets.xcassets */,
+				64AEAD8F216D93D400630DEF /* LaunchScreen.storyboard */,
+				64AEAD92216D93D400630DEF /* Info.plist */,
+				64AEAD8A216D93D300630DEF /* TrainingLogMobile.xcdatamodeld */,
+				64901F72217498C3007BF638 /* SignInViewController.swift */,
+				64901F742174B60F007BF638 /* RegistrationViewController.swift */,
+				64901F762174B837007BF638 /* DashboardViewController.swift */,
+			);
+			path = TrainingLogMobile;
+			sourceTree = "<group>";
+		};
+		64AEAD9A216D93D400630DEF /* TrainingLogMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				64AEAD9B216D93D400630DEF /* TrainingLogMobileTests.swift */,
+				64AEAD9D216D93D400630DEF /* Info.plist */,
+			);
+			path = TrainingLogMobileTests;
+			sourceTree = "<group>";
+		};
+		C6F98D99323FF5DA5C29EF3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1964E593D042E20DE16D8EC /* Pods_TrainingLogMobile.framework */,
+				B72F8188D11EB71543B6A507 /* Pods_TrainingLogMobileTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64AEAD7F216D93D300630DEF /* TrainingLogMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64AEADA0216D93D400630DEF /* Build configuration list for PBXNativeTarget "TrainingLogMobile" */;
+			buildPhases = (
+				3D35CA8C9A2BFF7B613BD43E /* [CP] Check Pods Manifest.lock */,
+				64AEAD7C216D93D300630DEF /* Sources */,
+				64AEAD7D216D93D300630DEF /* Frameworks */,
+				64AEAD7E216D93D300630DEF /* Resources */,
+				B237AF8978168164094679AD /* [CP] Embed Pods Frameworks */,
+				7326B07D9F1E87F924F966BA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrainingLogMobile;
+			productName = TrainingLogMobile;
+			productReference = 64AEAD80216D93D300630DEF /* TrainingLogMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64AEAD96216D93D400630DEF /* TrainingLogMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64AEADA3216D93D400630DEF /* Build configuration list for PBXNativeTarget "TrainingLogMobileTests" */;
+			buildPhases = (
+				7F7239F214F84480D95D94D0 /* [CP] Check Pods Manifest.lock */,
+				64AEAD93216D93D400630DEF /* Sources */,
+				64AEAD94216D93D400630DEF /* Frameworks */,
+				64AEAD95216D93D400630DEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64AEAD99216D93D400630DEF /* PBXTargetDependency */,
+			);
+			name = TrainingLogMobileTests;
+			productName = TrainingLogMobileTests;
+			productReference = 64AEAD97216D93D400630DEF /* TrainingLogMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64AEAD78216D93D300630DEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Max Davis";
+				TargetAttributes = {
+					64AEAD7F216D93D300630DEF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					64AEAD96216D93D400630DEF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 64AEAD7F216D93D300630DEF;
+					};
+				};
+			};
+			buildConfigurationList = 64AEAD7B216D93D300630DEF /* Build configuration list for PBXProject "TrainingLogMobile" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64AEAD77216D93D300630DEF;
+			productRefGroup = 64AEAD81216D93D300630DEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64AEAD7F216D93D300630DEF /* TrainingLogMobile */,
+				64AEAD96216D93D400630DEF /* TrainingLogMobileTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64AEAD7E216D93D300630DEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64AEAD91216D93D400630DEF /* LaunchScreen.storyboard in Resources */,
+				64AEAD8E216D93D400630DEF /* Assets.xcassets in Resources */,
+				64AEAD89216D93D300630DEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64AEAD95216D93D400630DEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D35CA8C9A2BFF7B613BD43E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrainingLogMobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7326B07D9F1E87F924F966BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TrainingLogMobile/Pods-TrainingLogMobile-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainingLogMobile/Pods-TrainingLogMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F7239F214F84480D95D94D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrainingLogMobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B237AF8978168164094679AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TrainingLogMobile/Pods-TrainingLogMobile-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainingLogMobile/Pods-TrainingLogMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64AEAD7C216D93D300630DEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64901F73217498C3007BF638 /* SignInViewController.swift in Sources */,
+				64901F772174B837007BF638 /* DashboardViewController.swift in Sources */,
+				64AEAD86216D93D300630DEF /* ViewController.swift in Sources */,
+				64AEAD8C216D93D300630DEF /* TrainingLogMobile.xcdatamodeld in Sources */,
+				64AEAD84216D93D300630DEF /* AppDelegate.swift in Sources */,
+				64901F752174B60F007BF638 /* RegistrationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64AEAD93216D93D400630DEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64AEAD9C216D93D400630DEF /* TrainingLogMobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64AEAD99216D93D400630DEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64AEAD7F216D93D300630DEF /* TrainingLogMobile */;
+			targetProxy = 64AEAD98216D93D400630DEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		64AEAD87216D93D300630DEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64AEAD88216D93D300630DEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		64AEAD8F216D93D400630DEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64AEAD90216D93D400630DEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64AEAD9E216D93D400630DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		64AEAD9F216D93D400630DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64AEADA1216D93D400630DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DF54A5A8A0F00D886882B05 /* Pods-TrainingLogMobile.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M8HVZGWR5;
+				INFOPLIST_FILE = TrainingLogMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MaxDavisUCLATFXC.TrainingLogMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64AEADA2216D93D400630DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20DC2FCA5A32BD9125FA9577 /* Pods-TrainingLogMobile.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M8HVZGWR5;
+				INFOPLIST_FILE = TrainingLogMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MaxDavisUCLATFXC.TrainingLogMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		64AEADA4216D93D400630DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1344FBDE38176B5FE2C3D40F /* Pods-TrainingLogMobileTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M8HVZGWR5;
+				INFOPLIST_FILE = TrainingLogMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MaxDavisUCLATFXC.TrainingLogMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainingLogMobile.app/TrainingLogMobile";
+			};
+			name = Debug;
+		};
+		64AEADA5216D93D400630DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64930C8AE1AEA046E9CE9E7D /* Pods-TrainingLogMobileTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M8HVZGWR5;
+				INFOPLIST_FILE = TrainingLogMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MaxDavisUCLATFXC.TrainingLogMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainingLogMobile.app/TrainingLogMobile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64AEAD7B216D93D300630DEF /* Build configuration list for PBXProject "TrainingLogMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64AEAD9E216D93D400630DEF /* Debug */,
+				64AEAD9F216D93D400630DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64AEADA0216D93D400630DEF /* Build configuration list for PBXNativeTarget "TrainingLogMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64AEADA1216D93D400630DEF /* Debug */,
+				64AEADA2216D93D400630DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64AEADA3216D93D400630DEF /* Build configuration list for PBXNativeTarget "TrainingLogMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64AEADA4216D93D400630DEF /* Debug */,
+				64AEADA5216D93D400630DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		64AEAD8A216D93D300630DEF /* TrainingLogMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				64AEAD8B216D93D300630DEF /* TrainingLogMobile.xcdatamodel */,
+			);
+			currentVersion = 64AEAD8B216D93D300630DEF /* TrainingLogMobile.xcdatamodel */;
+			path = TrainingLogMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 64AEAD78216D93D300630DEF /* Project object */;
+}
