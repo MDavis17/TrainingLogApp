@@ -33,14 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("\(error.localizedDescription)")
         } else {
             
-//            let viewController:ViewController = window!.rootViewController as! ViewController
-//            let sign_in_view:SignInViewController = window!.rootViewController as! SignInViewController
 
-//                        let sign_in_view:SignInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInView") as! SignInViewController
-            
-            
-            
-//            let sign_in_view:SignInViewController = window.
             
             // Perform any operations on signed in user here.
             let userId = user.userID                  // For client-side use only!
@@ -50,15 +43,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let familyName = user.profile.familyName
             let email = user.profile.email
             // ...
-//            viewController.setUserFirstName(name: givenName!)
             
-//            sign_in_view.nameLabel.text = "Welcome "+givenName!+"!"
             print("inside: did sign in")
             currentUser = fullName!
+            var registered = false
+            
+            guard let url = URL(string:"http://localhost:8080/athletes/search/findByLastName?name="+familyName!) else { return }
+            URLSession.shared.dataTask(with: url) { (data, response
+                , error) in
+                guard let data = data else { return }
+                do {
+                    let decoder = JSONDecoder()
+                    let responseData = try decoder.decode(Response.self, from: data)
+                    print("Start   **********************")
+                    print(fullName!)
+                    
+                    for athlete in responseData._embedded.athletes {
+                        if fullName == String(athlete.firstName+" "+athlete.lastName) {
+                            registered = true
+                            break
+                        }
+                    }
+//                    if !registered {
+//                        print("athlete not registered")
+//                    }
+                    print("End     **********************")
+                } catch let err {
+                    print("Err", err)
+                }
+                }.resume()
             
             if var topController = UIApplication.shared.keyWindow?.rootViewController {
                 while let presentedViewController = topController.presentedViewController {
                     topController = presentedViewController
+                    if !registered {
+                        let alert = UIAlertController(title: "Please make a profile before signing in.", message: "We need more information about you.", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                        alert.addAction(UIAlertAction(title: "Register", style: .default, handler: {action in topController.performSegue(withIdentifier: "registerUser", sender: topController)} ))
+                        topController.present(alert, animated: true)
+                        return
+                    }
                     
                     // try to get back to dashboard after login
                     topController.dismiss(animated: true, completion: {});

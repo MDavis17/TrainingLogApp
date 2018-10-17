@@ -18,6 +18,8 @@
 		64AEAD8E216D93D400630DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64AEAD8D216D93D400630DEF /* Assets.xcassets */; };
 		64AEAD91216D93D400630DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64AEAD8F216D93D400630DEF /* LaunchScreen.storyboard */; };
 		64AEAD9C216D93D400630DEF /* TrainingLogMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AEAD9B216D93D400630DEF /* TrainingLogMobileTests.swift */; };
+		64DEA7922176E50300D4FBC4 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEA7912176E50300D4FBC4 /* Athlete.swift */; };
+		64DEA79421774A0D00D4FBC4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEA79321774A0D00D4FBC4 /* Response.swift */; };
 		96D6C3889F04E5A2341AD82B /* Pods_TrainingLogMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72F8188D11EB71543B6A507 /* Pods_TrainingLogMobileTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		64AEAD97216D93D400630DEF /* TrainingLogMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingLogMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64AEAD9B216D93D400630DEF /* TrainingLogMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingLogMobileTests.swift; sourceTree = "<group>"; };
 		64AEAD9D216D93D400630DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64DEA7912176E50300D4FBC4 /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
+		64DEA79321774A0D00D4FBC4 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		B72F8188D11EB71543B6A507 /* Pods_TrainingLogMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingLogMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1964E593D042E20DE16D8EC /* Pods_TrainingLogMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingLogMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +122,8 @@
 				64901F72217498C3007BF638 /* SignInViewController.swift */,
 				64901F742174B60F007BF638 /* RegistrationViewController.swift */,
 				64901F762174B837007BF638 /* DashboardViewController.swift */,
+				64DEA7912176E50300D4FBC4 /* Athlete.swift */,
+				64DEA79321774A0D00D4FBC4 /* Response.swift */,
 			);
 			path = TrainingLogMobile;
 			sourceTree = "<group>";
@@ -324,12 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DEA79421774A0D00D4FBC4 /* Response.swift in Sources */,
 				64901F73217498C3007BF638 /* SignInViewController.swift in Sources */,
 				64901F772174B837007BF638 /* DashboardViewController.swift in Sources */,
 				64AEAD86216D93D300630DEF /* ViewController.swift in Sources */,
 				64AEAD8C216D93D300630DEF /* TrainingLogMobile.xcdatamodeld in Sources */,
 				64AEAD84216D93D300630DEF /* AppDelegate.swift in Sources */,
 				64901F752174B60F007BF638 /* RegistrationViewController.swift in Sources */,
+				64DEA7922176E50300D4FBC4 /* Athlete.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

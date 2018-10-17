@@ -15,8 +15,17 @@ class DashboardViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("in dashboard: app_delegate current name = "+app_delegate.currentUser)
         if app_delegate.currentUser == "" {
-            
+            self.navigationItem.title = "Dashboard"
+        }
+        else {
+            self.navigationItem.title = app_delegate.currentUser+" Dashboard"
         }
     }
     
