@@ -14,7 +14,9 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
-    var currentUser = ""
+    var currentUserFullName = ""
+    var userYear = 0
+    var userGender = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -25,6 +27,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         return GIDSignIn.sharedInstance().handle(url as URL?, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation:options[UIApplicationOpenURLOptionsKey.annotation])
+    }
+    
+    func userIsRegistered(familyName:String,fullName:String,finished:@escaping ((_ isRegistered:Bool) -> Void)) {
+        let url = URL(string:"http://localhost:8080/athletes/search/findByLastName?name="+familyName)
+        URLSession.shared.dataTask(with: url!) { (data, response
+            , error) in
+            guard let data = data else { return }
+            do {
+                let decoder = JSONDecoder()
+                let responseData = try decoder.decode(Response.self, from: data)
+                
+                for athlete in responseData._embedded.athletes {
+                    if fullName == String(athlete.firstName+" "+athlete.lastName) {
+                        finished(true)
+                        break
+                    }
+                }
+                finished(false)
+            } catch let err {
+                print("Err", err)
+            }
+            }.resume()
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
@@ -45,53 +69,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             // ...
             
             print("inside: did sign in")
-            currentUser = fullName!
-            var registered = false
+            currentUserFullName = fullName!
             
-            guard let url = URL(string:"http://localhost:8080/athletes/search/findByLastName?name="+familyName!) else { return }
-            URLSession.shared.dataTask(with: url) { (data, response
-                , error) in
-                guard let data = data else { return }
-                do {
-                    let decoder = JSONDecoder()
-                    let responseData = try decoder.decode(Response.self, from: data)
-                    print("Start   **********************")
-                    print(fullName!)
-                    
-                    for athlete in responseData._embedded.athletes {
-                        if fullName == String(athlete.firstName+" "+athlete.lastName) {
-                            registered = true
-                            break
+            userIsRegistered(familyName: familyName!, fullName: fullName!, finished: {isRegistered in
+                if var topController = UIApplication.shared.keyWindow?.rootViewController {
+                    while let presentedViewController = topController.presentedViewController {
+                        topController = presentedViewController
+                        if !isRegistered {
+                            let alert = UIAlertController(title: "Please make a profile before signing in.", message: "We need more information about you.", preferredStyle: .alert)
+    
+                            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                            alert.addAction(UIAlertAction(title: "Register", style: .default, handler: {action in topController.performSegue(withIdentifier: "registerUser", sender: topController)} ))
+                            topController.present(alert, animated: true)
+                            return
                         }
+    
+                        // try to get back to dashboard after login
+                        topController.dismiss(animated: true, completion: {});
+                        topController.navigationController?.popViewController(animated: true);
+    
                     }
-//                    if !registered {
-//                        print("athlete not registered")
-//                    }
-                    print("End     **********************")
-                } catch let err {
-                    print("Err", err)
                 }
-                }.resume()
-            
-            if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                while let presentedViewController = topController.presentedViewController {
-                    topController = presentedViewController
-                    if !registered {
-                        let alert = UIAlertController(title: "Please make a profile before signing in.", message: "We need more information about you.", preferredStyle: .alert)
-                        
-                        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                        alert.addAction(UIAlertAction(title: "Register", style: .default, handler: {action in topController.performSegue(withIdentifier: "registerUser", sender: topController)} ))
-                        topController.present(alert, animated: true)
-                        return
-                    }
-                    
-                    // try to get back to dashboard after login
-                    topController.dismiss(animated: true, completion: {});
-                    topController.navigationController?.popViewController(animated: true);
-                    
-                }
-            }
-            
+            })
             
         }
     }

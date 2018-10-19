@@ -27,7 +27,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         print("inside: view did load")
         GIDSignIn.sharedInstance().uiDelegate = self
-        nameLabel.text = "Welcome "+app_delegate.currentUser
+        nameLabel.text = "Welcome "+app_delegate.currentUserFullName
         
         
         
