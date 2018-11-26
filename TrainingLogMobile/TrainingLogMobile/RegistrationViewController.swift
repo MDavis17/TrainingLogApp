@@ -107,7 +107,8 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate,UIPicker
         let nameArr = app_delegate.currentUserFullName.split(separator: " ")
         let first_name = nameArr[0]
         let last_name = nameArr[1]
-        let json:[String: Any] = ["firstName":first_name,"lastName":last_name,"gender":genderTextField.text!.prefix(1),"year":Int(yearTextField.text!)]
+        let email = app_delegate.userEmail
+        let json:[String: Any] = ["firstName":first_name,"lastName":last_name,"email":email,"gender":genderTextField.text!.prefix(1),"year":Int(yearTextField.text!)]
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         let url = URL(string: "http://localhost:8080/athletes")!
         var request = URLRequest(url: url)

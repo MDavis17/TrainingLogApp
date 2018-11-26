@@ -13,14 +13,16 @@ public class Athlete {
     private long id;
     private String firstName;
     private String lastName;
+    private String email;
     private String gender;
     private int year;
 
     protected Athlete() {}
 
-    public Athlete(String firstName, String lastName, String gender, int year) {
+    public Athlete(String firstName, String lastName, String email, String gender, int year) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
         this.gender = gender;
         this.year = year;
     }
@@ -57,8 +59,12 @@ public class Athlete {
         this.year = year;
     }
 
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
+
     @Override
     public String toString() {
-        return String.format("Athlete[firstName='%s', lastName='%s', gender='%s', year=%x]",firstName,lastName,gender,year);
+        return String.format("Athlete[firstName='%s', lastName='%s', email='%s', gender='%s', year=%x]",firstName,lastName,email,gender,year);
     }
 }

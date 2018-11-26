@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D1856E924C9D5B36D19E3EA /* Pods_TrainingLogMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1964E593D042E20DE16D8EC /* Pods_TrainingLogMobile.framework */; };
+		64218BD4217A043100D52656 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64218BD3217A043100D52656 /* DashboardTableViewCell.swift */; };
 		64901F73217498C3007BF638 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64901F72217498C3007BF638 /* SignInViewController.swift */; };
 		64901F752174B60F007BF638 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64901F742174B60F007BF638 /* RegistrationViewController.swift */; };
 		64901F772174B837007BF638 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64901F762174B837007BF638 /* DashboardViewController.swift */; };
@@ -37,6 +38,7 @@
 		1344FBDE38176B5FE2C3D40F /* Pods-TrainingLogMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingLogMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingLogMobileTests/Pods-TrainingLogMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		20DC2FCA5A32BD9125FA9577 /* Pods-TrainingLogMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingLogMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingLogMobile/Pods-TrainingLogMobile.release.xcconfig"; sourceTree = "<group>"; };
 		5DF54A5A8A0F00D886882B05 /* Pods-TrainingLogMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingLogMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingLogMobile/Pods-TrainingLogMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		64218BD3217A043100D52656 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		64901F72217498C3007BF638 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		64901F742174B60F007BF638 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		64901F762174B837007BF638 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				64901F762174B837007BF638 /* DashboardViewController.swift */,
 				64DEA7912176E50300D4FBC4 /* Athlete.swift */,
 				64DEA79321774A0D00D4FBC4 /* Response.swift */,
+				64218BD3217A043100D52656 /* DashboardTableViewCell.swift */,
 			);
 			path = TrainingLogMobile;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				64AEAD86216D93D300630DEF /* ViewController.swift in Sources */,
 				64AEAD8C216D93D300630DEF /* TrainingLogMobile.xcdatamodeld in Sources */,
 				64AEAD84216D93D300630DEF /* AppDelegate.swift in Sources */,
+				64218BD4217A043100D52656 /* DashboardTableViewCell.swift in Sources */,
 				64901F752174B60F007BF638 /* RegistrationViewController.swift in Sources */,
 				64DEA7922176E50300D4FBC4 /* Athlete.swift in Sources */,
 			);

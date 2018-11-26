@@ -14,6 +14,7 @@ struct Response: Codable {
         struct Athlete: Codable {
             let firstName: String
             let lastName: String
+            let email: String
             let gender: String
             let year: Int
         }

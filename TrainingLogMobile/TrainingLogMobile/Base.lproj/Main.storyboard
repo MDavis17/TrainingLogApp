@@ -82,7 +82,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tug-Oh-2pM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65" y="1191"/>
+            <point key="canvasLocation" x="71" y="1191"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="KJQ-Jy-oKX">
@@ -92,14 +92,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmM-r0-od2">
-                                <rect key="frame" x="165" y="127" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="sign in"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="rKZ-2d-1EH"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obF-eD-EsV">
                                 <rect key="frame" x="145" y="80" width="84" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -107,11 +99,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N6W-4Q-Q3N">
+                                <rect key="frame" x="16" y="177" width="343" height="321"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmM-r0-od2">
+                                <rect key="frame" x="130" y="139" width="114" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="sign in"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="rKZ-2d-1EH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2MR-4x-edb" firstAttribute="trailing" secondItem="N6W-4Q-Q3N" secondAttribute="trailing" constant="16" id="H2N-f1-w6Q"/>
+                            <constraint firstItem="N6W-4Q-Q3N" firstAttribute="leading" secondItem="2MR-4x-edb" secondAttribute="leading" constant="16" id="l5k-Yf-NjX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2MR-4x-edb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="wvB-hT-8Lb"/>
+                    <connections>
+                        <outlet property="dashTableView" destination="N6W-4Q-Q3N" id="Brl-Wn-ZlW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQB-oJ-Vzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,6 +180,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wge-Ag-by4"/>
+        <segue reference="rSR-nR-iUO"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -26,28 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrainingLogMobile/AppDelegate.swift"
-            timestampString = "561637987.3225549"
+            timestampString = "564955761.481023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "userIsRegistered(familyName:fullName:finished:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TrainingLogMobile/AppDelegate.swift"
-            timestampString = "561637987.323016"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "userIsRegistered(familyName:fullName:finished:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "userIsRegistered(familyName:fullName:email:finished:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
