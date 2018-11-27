@@ -16,4 +16,5 @@ class DailyQViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Daily Recovery"
     }
+    
 }
