@@ -62,6 +62,8 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate,UIPicker
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        genderTextField.placeholder = "Select your gender"
+        
         let genderPicker = UIPickerView()
         let yearPicker = UIPickerView()
         genderPicker.accessibilityIdentifier = "genderID"
@@ -100,6 +102,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate,UIPicker
         
     }
     
+    // need a completion handler on this one to push the dashboard
     @IBAction func submit(_ sender: UIButton) {
         // prepare to register new athlete with POST request
         app_delegate.userYear = Int(yearTextField.text!)!
@@ -124,11 +127,15 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate,UIPicker
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
                 print(responseJSON)
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "returnToDashboard", sender: nil)
+                }
             }
         }
         task.resume()
             
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//        self.performSegue(withIdentifier: "returnToDashboard", sender: nil)
 //        curl -i -X POST -H "Content-Type:application/json" -d '{"firstName":"Max","lastName":"Davis","gender":"M","year":5}' http://localhost:8080/athletes
     }
     

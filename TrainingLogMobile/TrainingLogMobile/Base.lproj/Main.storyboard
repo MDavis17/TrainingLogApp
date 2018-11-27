@@ -15,7 +15,7 @@
             <objects>
                 <viewController storyboardIdentifier="SignInView" id="BYZ-38-t0r" customClass="SignInViewController" customModule="TrainingLogMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVV-1A-OvV" customClass="GIDSignInButton">
@@ -38,14 +38,6 @@
                                     <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ubI-ot-zzO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCG-cG-vCq">
-                                <rect key="frame" x="150" y="194" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="dashboard"/>
-                                <connections>
-                                    <segue destination="9AG-vW-Tel" kind="show" id="Wge-Ag-by4"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign in page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVZ-2s-Ow7">
                                 <rect key="frame" x="140" y="124" width="95" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -58,10 +50,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign in page" id="KgH-48-ih2"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="nameLabel" destination="QiM-wl-Zva" id="PeI-YC-u5z"/>
                         <outlet property="signInButton" destination="bVV-1A-OvV" id="0kG-CH-Sxa"/>
                         <segue destination="oAS-SW-fj7" kind="show" identifier="registerUser" id="RA0-Qg-SPT"/>
+                        <segue destination="9AG-vW-Tel" kind="show" identifier="returnToDashboard" id="eAi-C6-dpq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,7 +83,7 @@
             <objects>
                 <viewController id="9AG-vW-Tel" customClass="DashboardViewController" customModule="TrainingLogMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rZv-gc-ITn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obF-eD-EsV">
@@ -108,7 +102,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="sign in"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="rKZ-2d-1EH"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="signIn" id="rKZ-2d-1EH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,8 +114,10 @@
                         <viewLayoutGuide key="safeArea" id="2MR-4x-edb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="wvB-hT-8Lb"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="dashTableView" destination="N6W-4Q-Q3N" id="Brl-Wn-ZlW"/>
+                        <segue destination="oAS-SW-fj7" kind="show" identifier="registerUser" id="4iM-cn-Xk7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQB-oJ-Vzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,7 +129,7 @@
             <objects>
                 <viewController id="oAS-SW-fj7" customClass="RegistrationViewController" customModule="TrainingLogMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eIY-QZ-6nm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Enter Information about yourself" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmN-fP-7ZA">
@@ -169,9 +165,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="FTl-4g-Ikn"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="genderTextField" destination="2Nf-7N-3QJ" id="9UV-tC-vbu"/>
                         <outlet property="yearTextField" destination="qRF-jq-OPz" id="ltL-B6-vGz"/>
+                        <segue destination="9AG-vW-Tel" kind="show" identifier="returnToDashboard" id="4ya-2w-q6v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gps-IV-zjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,6 +178,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rSR-nR-iUO"/>
+        <segue reference="4iM-cn-Xk7"/>
+        <segue reference="4ya-2w-q6v"/>
     </inferredMetricsTieBreakers>
 </document>
