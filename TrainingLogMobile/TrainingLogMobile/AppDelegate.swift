@@ -87,13 +87,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             userEmail = email!
             
             // return to dashboard
-            
             if var topController = UIApplication.shared.keyWindow?.rootViewController {
                 while let presentedViewController = topController.presentedViewController {
                     topController = presentedViewController
-                    if topController is SignInViewController {
-                        topController.performSegue(withIdentifier: "returnToDashboard", sender: nil)
-                    }
+                    topController.dismiss(animated: true, completion: {});
+                    topController.navigationController?.popViewController(animated: true);
                 }
             }
             

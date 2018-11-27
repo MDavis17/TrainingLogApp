@@ -13,15 +13,13 @@ import CoreData
 class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var dashTableView: UITableView!
-    
     let dashTableCellValsArr: [String] = ["Daily","Stats","Leaders"]
-    
+
     let cellReuseIdentifier = "cell"
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dashTableCellValsArr.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DashboardTableViewCell = self.dashTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! DashboardTableViewCell
         return cell
@@ -58,6 +56,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidAppear(animated)
         print("in dashboard viewDidAppear")
         
+        //temporarliy removing the table view from dash
         dashTableView.delegate = self
         dashTableView.dataSource = self
         

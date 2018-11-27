@@ -128,7 +128,17 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate,UIPicker
             if let responseJSON = responseJSON as? [String: Any] {
                 print(responseJSON)
                 DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "returnToDashboard", sender: nil)
+                    // return to dashboard
+                    self.dismiss(animated: true, completion: {});
+                    self.navigationController?.popViewController(animated: true);
+//                    if var topController = UIApplication.shared.keyWindow?.rootViewController {
+//                        while let presentedViewController = topController.presentedViewController {
+//                            topController = presentedViewController
+//                            topController.dismiss(animated: true, completion: {});
+//                            topController.navigationController?.popViewController(animated: true);
+//                        }
+//                    }
+//                    self.performSegue(withIdentifier: "returnToDashboard", sender: nil)
                 }
             }
         }
