@@ -13,7 +13,8 @@ class QuestionsViewController: UIPageViewController,UIPageViewControllerDelegate
     lazy var orderedQuestions: [QuestionController] = {
         return [self.newQuestion(question: "double"),
                 self.newQuestion(question: "fuel"),
-                self.newQuestion(question: "stretch_roll")]
+                self.newQuestion(question: "stretch_roll"),
+                self.newQuestion(question: "submit")]
     }()
     
     var questionControl = UIPageControl()

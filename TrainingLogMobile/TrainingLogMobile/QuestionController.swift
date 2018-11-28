@@ -21,7 +21,10 @@ class QuestionController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func submitQuestions(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
