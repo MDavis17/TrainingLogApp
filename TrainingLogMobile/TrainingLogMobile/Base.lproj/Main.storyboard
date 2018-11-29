@@ -77,8 +77,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6t-VN-HYk">
-                                            <rect key="frame" x="16" y="34" width="139" height="21"/>
+                                            <rect key="frame" x="16" y="34" width="278" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgM-Ap-irT">
+                                            <rect key="frame" x="302" y="34" width="57" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.44530174839999997" green="0.79607843140000001" blue="0.1762321167" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -87,8 +95,9 @@
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="QuestionTableViewCell"/>
                                 <connections>
+                                    <outlet property="answerLabel" destination="OgM-Ap-irT" id="Plt-XX-WCc"/>
                                     <outlet property="questionTextLabel" destination="v6t-VN-HYk" id="wW4-q0-r9t"/>
-                                    <segue destination="CJM-Bz-Vff" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="1tm-wM-NlW"/>
+                                    <segue destination="CJM-Bz-Vff" kind="presentation" identifier="questionPopUp" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="1tm-wM-NlW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -97,6 +106,10 @@
                             <outlet property="delegate" destination="FIB-Yi-Q5b" id="zhK-0R-es3"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="tZL-fH-Ddg"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhL-eW-m0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,7 +127,7 @@
                                 <rect key="frame" x="16" y="251" width="343" height="165"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HES-Jp-W6e">
-                                        <rect key="frame" x="74" y="8" width="196" height="21"/>
+                                        <rect key="frame" x="8" y="8" width="327" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -123,7 +136,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ves-cI-XEp">
                                         <rect key="frame" x="82" y="67" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.44530174839999997" green="0.79607843140000001" blue="0.1762321167" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.84313725490000002" green="0.83310876749999996" blue="0.1225385584" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="No">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -134,7 +147,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Az-sg-PCN">
                                         <rect key="frame" x="240" y="67" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.44530174839999997" green="0.79607843140000001" blue="0.1762321167" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.84313725490000002" green="0.83310876749999996" blue="0.1225385584" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Yes">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -156,6 +169,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Thw-0E-EcY"/>
                     </view>
+                    <connections>
+                        <outlet property="popUpQuestionLabel" destination="HES-Jp-W6e" id="4im-En-4gV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPq-On-8ql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

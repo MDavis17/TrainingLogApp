@@ -10,9 +10,17 @@ import UIKit
 
 class PopUpViewController: UIViewController {
     
-
+    //question table view controller delegate stuff
+    var delegate:QuestionDelegate?
+    var cell:QuestionTableViewCell?
+    var question:String?
+    
+    @IBOutlet weak var popUpQuestionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        popUpQuestionLabel.text = question
         
         // blur
 //        let blurEffect = UIBlurEffect(style: .extraLight)
@@ -30,14 +38,17 @@ class PopUpViewController: UIViewController {
     }
     
     @IBAction func yes(_ sender: UIButton) {
-        returnToQuestions()
+        returnToQuestions(ans: "Yes")
     }
     
     @IBAction func no(_ sender: UIButton) {
-        returnToQuestions()
+        returnToQuestions(ans: "No")
     }
     
-    func returnToQuestions() {
+    func returnToQuestions(ans: String) {
+        // pass answer text back through delegate
+        delegate?.onQuestionAnswer(ans: ans, cell: cell!)
+        
         self.dismiss(animated: true, completion: {});
 //        if let navController = self.navigationController {
 //            navController.popViewController(animated: true)
@@ -53,6 +64,7 @@ class PopUpViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
     }
     */
 

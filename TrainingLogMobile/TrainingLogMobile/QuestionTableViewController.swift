@@ -8,9 +8,33 @@
 
 import UIKit
 
-class QuestionTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
+class QuestionTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate, QuestionDelegate {
     
+    func onQuestionAnswer(ans: String, cell: QuestionTableViewCell) {
+//        print("returned from the "+cell.questionTextLabel.text!+" popup with answer: \""+ans+"\"")
+        cell.answerLabel.isHidden = false
+        cell.answerLabel.text = ans
+        cell.isSelected = false
+    }
+    
+    // count is the number of questions per day
     var questions = [Question]()
+    
+    var currentQuestionCell = QuestionTableViewCell()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.setToolbarHidden(false, animated: true)
+        loadQuestions()
+        
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
     
     private func loadQuestions() {
         guard let q1 = Question(question: "Double?",status: false) else {
@@ -25,17 +49,7 @@ class QuestionTableViewController: UITableViewController, UIPopoverPresentationC
         questions += [q1,q2,q3]
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        loadQuestions()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,6 +74,8 @@ class QuestionTableViewController: UITableViewController, UIPopoverPresentationC
         let question = questions[indexPath.row]
 
         cell.questionTextLabel.text = question.question
+        cell.answerLabel.isHidden = true
+//        currentQuestionCell = cell
         
         return cell
     }
@@ -67,6 +83,7 @@ class QuestionTableViewController: UITableViewController, UIPopoverPresentationC
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let indexPath = self.tableView.indexPathForSelectedRow {
             let selectedQuestionSourceView = tableView.cellForRow(at: indexPath)
+            currentQuestionCell = selectedQuestionSourceView as! QuestionTableViewCell
         }
     }
     
@@ -106,14 +123,28 @@ class QuestionTableViewController: UITableViewController, UIPopoverPresentationC
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "questionPopUp") {
+            let vc = segue.destination as! PopUpViewController
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let selectedQuestionSourceView = tableView.cellForRow(at: indexPath)
+                currentQuestionCell = selectedQuestionSourceView as! QuestionTableViewCell
+                vc.delegate = self
+//                vc.cell = currentQuestionCell
+                vc.cell = currentQuestionCell
+                vc.question = currentQuestionCell.questionTextLabel.text
+            }
+        }
+        
+        
     }
-    */
+ 
 
 }
