@@ -10,8 +10,11 @@
 		5D1856E924C9D5B36D19E3EA /* Pods_TrainingLogMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1964E593D042E20DE16D8EC /* Pods_TrainingLogMobile.framework */; };
 		64218BD4217A043100D52656 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64218BD3217A043100D52656 /* DashboardTableViewCell.swift */; };
 		6459FC8021ADE7C4009C8D2D /* DailyQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459FC7F21ADE7C4009C8D2D /* DailyQViewController.swift */; };
-		6459FC8221ADF9B0009C8D2D /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459FC8121ADF9B0009C8D2D /* QuestionsViewController.swift */; };
 		6459FC8421ADFB23009C8D2D /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459FC8321ADFB23009C8D2D /* QuestionController.swift */; };
+		6459FC8821AF25EB009C8D2D /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459FC8721AF25EB009C8D2D /* QuestionTableViewCell.swift */; };
+		6459FC8A21AF2A39009C8D2D /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459FC8921AF2A39009C8D2D /* QuestionTableViewController.swift */; };
+		6459FC8C21AF2EE8009C8D2D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459FC8B21AF2EE8009C8D2D /* Question.swift */; };
+		6459FC8E21AF59DE009C8D2D /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459FC8D21AF59DE009C8D2D /* PopUpViewController.swift */; };
 		64901F73217498C3007BF638 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64901F72217498C3007BF638 /* SignInViewController.swift */; };
 		64901F752174B60F007BF638 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64901F742174B60F007BF638 /* RegistrationViewController.swift */; };
 		64901F772174B837007BF638 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64901F762174B837007BF638 /* DashboardViewController.swift */; };
@@ -43,8 +46,11 @@
 		5DF54A5A8A0F00D886882B05 /* Pods-TrainingLogMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingLogMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingLogMobile/Pods-TrainingLogMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		64218BD3217A043100D52656 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		6459FC7F21ADE7C4009C8D2D /* DailyQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQViewController.swift; sourceTree = "<group>"; };
-		6459FC8121ADF9B0009C8D2D /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		6459FC8321ADFB23009C8D2D /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		6459FC8721AF25EB009C8D2D /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		6459FC8921AF2A39009C8D2D /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
+		6459FC8B21AF2EE8009C8D2D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6459FC8D21AF59DE009C8D2D /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		64901F72217498C3007BF638 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		64901F742174B60F007BF638 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		64901F762174B837007BF638 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -123,7 +129,9 @@
 				64AEAD83216D93D300630DEF /* AppDelegate.swift */,
 				64AEAD85216D93D300630DEF /* ViewController.swift */,
 				64AEAD87216D93D300630DEF /* Main.storyboard */,
-				6459FC8121ADF9B0009C8D2D /* QuestionsViewController.swift */,
+				6459FC8D21AF59DE009C8D2D /* PopUpViewController.swift */,
+				6459FC8921AF2A39009C8D2D /* QuestionTableViewController.swift */,
+				6459FC8721AF25EB009C8D2D /* QuestionTableViewCell.swift */,
 				64AEAD8D216D93D400630DEF /* Assets.xcassets */,
 				64AEAD8F216D93D400630DEF /* LaunchScreen.storyboard */,
 				64AEAD92216D93D400630DEF /* Info.plist */,
@@ -133,6 +141,7 @@
 				64901F762174B837007BF638 /* DashboardViewController.swift */,
 				6459FC7F21ADE7C4009C8D2D /* DailyQViewController.swift */,
 				6459FC8321ADFB23009C8D2D /* QuestionController.swift */,
+				6459FC8B21AF2EE8009C8D2D /* Question.swift */,
 				64DEA7912176E50300D4FBC4 /* Athlete.swift */,
 				64DEA79321774A0D00D4FBC4 /* Response.swift */,
 				64218BD3217A043100D52656 /* DashboardTableViewCell.swift */,
@@ -342,14 +351,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6459FC8221ADF9B0009C8D2D /* QuestionsViewController.swift in Sources */,
+				6459FC8821AF25EB009C8D2D /* QuestionTableViewCell.swift in Sources */,
 				64DEA79421774A0D00D4FBC4 /* Response.swift in Sources */,
 				64901F73217498C3007BF638 /* SignInViewController.swift in Sources */,
 				64901F772174B837007BF638 /* DashboardViewController.swift in Sources */,
 				64AEAD86216D93D300630DEF /* ViewController.swift in Sources */,
+				6459FC8C21AF2EE8009C8D2D /* Question.swift in Sources */,
+				6459FC8A21AF2A39009C8D2D /* QuestionTableViewController.swift in Sources */,
 				64AEAD8C216D93D300630DEF /* TrainingLogMobile.xcdatamodeld in Sources */,
 				64AEAD84216D93D300630DEF /* AppDelegate.swift in Sources */,
 				6459FC8021ADE7C4009C8D2D /* DailyQViewController.swift in Sources */,
+				6459FC8E21AF59DE009C8D2D /* PopUpViewController.swift in Sources */,
 				64218BD4217A043100D52656 /* DashboardTableViewCell.swift in Sources */,
 				64901F752174B60F007BF638 /* RegistrationViewController.swift in Sources */,
 				64DEA7922176E50300D4FBC4 /* Athlete.swift in Sources */,

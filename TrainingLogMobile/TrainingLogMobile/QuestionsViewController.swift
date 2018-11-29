@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionsViewController: UIPageViewController,UIPageViewControllerDelegate,UIPageViewControllerDataSource {
+class QuestionsTableViewController: UIPageViewController,UIPageViewControllerDelegate,UIPageViewControllerDataSource {
     
     lazy var orderedQuestions: [QuestionController] = {
         return [self.newQuestion(question: "double"),
